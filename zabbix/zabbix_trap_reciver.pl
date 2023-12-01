@@ -1,0 +1,1 @@
+$SNMPTrapperFile = '/var/log/snmptrap/snmptrap.log';
