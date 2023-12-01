@@ -58,8 +58,7 @@ yum install -y zabbix-web-pgsql-scl zabbix-apache-conf-scl
 
 # Create initial database
 # Definir la contraseña como variable de entorno
-export PGPASSWORD=Z4bb1x
-sudo -u postgres PGPASSWORD=$PGPASSWORD createuser --pwprompt zabbix
+sudo -u postgres createuser -ew zabbix
 sudo -u postgres createdb -O zabbix zabbix
 
 zcat /usr/share/doc/zabbix-server-pgsql*/create.sql.gz | sudo -u zabbix psql zabbix
