@@ -1,0 +1,44 @@
+==Instalar el plugin de proxy solo si estamos detras de un proxy==
+ # vagrant plugin install vagrant-proxyconf
+
+==Arrancar, parar y ver el estado de las maquinas virtuales==
+ # vagrant up
+ # vagrant halt
+ # vagrant status
+
+ # vagrant up zbxsrv01
+ # vagrant up zbxclient01
+
+ # vagrant halt zbxsrv01
+ # vagrant halt zbxclient01
+
+==Eliminar las maquinas==
+ # vagrant destroy -f
+
+==Conexion via SSH a las maquinas==
+ # vagrant ssh zbxsrv01
+ # vagrant ssh zbxcliente01
+
+==Conexion via SSH a las maquinas con un cliente tipo Putty==
+ # Hostname: zbxsrv01
+ # IP      : 10.0.100.100
+ # Usuario : root
+ # Passwod : vagrant
+
+ # Hostname: zbxclient01
+ # IP      : 10.0.100.101
+ # Usuario : root
+ # Passwod : vagrant
+
+ # ssh -o "StrictHostKeyChecking no" root@10.0.100.100
+ # ssh -o "StrictHostKeyChecking no" root@10.0.100.101
+
+
+ ==Snapshot de Vagrant Pre-Instalacion==
+ C:\> vagrant snapshot save zbxsrv01 Pre-Zabbix-Install
+ C:\> vagrant snapshot save zbxclient01 Pre-Zabbix-Install
+ C:\> vagrant snapshot list
+
+==Solo en caso de necesitar realizar un Restore==
+ C:\> vagrant snapshot restore zbxsrv01 Pre-Zabbix-Install
+ C:\> vagrant snapshot restore zbxclient01 Pre-Zabbix-Install
