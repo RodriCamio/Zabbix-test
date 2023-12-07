@@ -1,6 +1,0 @@
-FROM centos/nginx-112-centos7
-
-COPY /zabbix/script.sh ./script.sh
-
-CMD [ "script.sh" ]
-

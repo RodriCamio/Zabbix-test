@@ -1,0 +1,8 @@
+.vagrant
+docker/
+Img/
+.gitignore
+provisioning_server.sh
+provisioning.sh
+vagrant-help.txt
+Vagrantfile 
